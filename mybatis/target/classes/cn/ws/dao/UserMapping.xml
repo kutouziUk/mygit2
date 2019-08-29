@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="userDao">
+<select id="findall" resultType="role">
+select * from sys_role
+</select>
+<insert id="add" parameterType="rolE">
+--         insert into sys_role values(null,"CTO","技术大佬")
+insert into sys_role values(#{id},#{roleName},#{roleDesc})
+</insert>
+<delete id="delete" parameterType="int">
+  delete from sys_role where id=#{id}
+</delete>
+</mapper>
+
